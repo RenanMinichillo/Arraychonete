@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="products.js"></script>
+    <script defer src="script.js"></script>
+    <title>Arraychonete</title>
+</head>
+
+<body>
+    <header>
+        <div class="interface">
+            <div class="info">
+                <ul>
+                    <li>
+                        <p>Rua dos Bobos, Bobalândia, Nº 0</p>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="bi bi-telephone-fill"></i>
+                            (11) 4403-2200
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="bi bi-clock-history"></i>
+                            24 HORAS
+                        </p>
+                    </li>
+                </ul>
+            </div><!--info-->
+            <div class="social">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div><!--social-->
+        </div><!--interface-->
+    </header>
+
+    <main>
+        <nav>
+            <div class="interface">
+                <div class="flex">
+                    <div class="menu">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <button id="btn-home">Início</button>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <button id="btn-menu">Produtos</button>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <button id="btn-filter">Filtro</button>
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!--menu-->
+                </div><!--flex-->
+            </div><!--flex-->
+        </nav>
+
+        <section class="products">
+            <div class="interface">
+                <div class="flex">
+                        <img class="home-logo" src="assets/logo.png">
+                    <div class="list">
+                        <ul id="list-menu">
+                        </ul>
+                    </div><!--list-->
+
+                    <div class="filter">
+                        <p>Filtrar</p>
+
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="snack">
+                                <span>Lanches</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="dessert">
+                                <span>Sobremesas</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="drink">
+                                <span>Bebidas</span>
+                            </li>
+                        </ul>
+                    </div><!--filter-->
+                </div><!--flex-->
+            </div><!--interface-->
+        </section>
+    </main>
+</body>
+
+</html>

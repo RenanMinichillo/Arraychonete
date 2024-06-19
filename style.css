@@ -1,0 +1,371 @@
+/* FONTE */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* ESTILOS GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+}
+
+body {
+    height: 100vh;
+    background-image: url(assets/background.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+
+.interface {
+    max-width: 1280px;
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+/* ESTILO DO CABEÇALHO */
+header {
+    background-color: #0095ff;
+    padding: 5px 2%;
+}
+
+header .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+header .info ul,
+header .social ul {
+    list-style: none;
+}
+
+header .info ul li,
+header .social ul li {
+    display: inline-block;
+}
+
+header .info ul li {
+    margin-right: 20px;
+}
+
+header .info ul li p {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-shadow: 0 0 4px #000;
+}
+
+header .social ul li a {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-right: 10px;
+    text-shadow: 0 0 4px #000;
+}
+
+header .social ul li a:hover {
+    color: #ff0;
+    transition: .3s ease-in-out;
+}
+
+/* ESTILO DO PRINCIPAL */
+main {
+    height: 100vh;
+}
+
+/* ESTILO DA NAVEGAÇÃO */
+nav {   
+    background-color: #dbdbdb;
+    border-bottom: 1px solid #c2c2c2;
+    box-shadow: 0 1px 8px #00000093;
+    padding: 10px 4% 0;
+}
+
+nav .flex {
+    align-items: center;
+    justify-content: center;
+}
+
+nav .menu ul {
+    list-style: none;
+}
+
+nav .menu ul li {
+    display: inline-block;
+}
+
+nav .menu ul li a button {
+    width: 120px;
+    background-color: #ff0;
+    border: none;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 0 4px #0000005d;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0 10px;
+    padding: 5px 0;
+}
+
+nav .menu ul li a button:hover {
+    background-color: rgb(255, 204, 0);
+    transform: scale(1.05);
+    transition: .2s ease-in-out;
+}
+
+/* ESTILO DE PRODUTOS */
+section.products {
+    padding: 20px 4%;
+}
+
+section.products .flex {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section.products img.home-logo {
+    position: absolute;
+    top: 25%;
+    width: 500px;
+    animation: pulse 1.3s linear infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        scale: 1.2;
+    }
+    100% {
+        scale: .8;
+    }
+}
+
+section.products .list ul {
+    display: grid;
+    grid-template-columns: repeat(3, 12rem);
+    list-style: none;
+}
+
+section.products .list ul li {
+    background-color: #000;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    margin: 10px 10px;
+    padding: 10px;
+}
+
+section.products .list ul li img {
+    max-width: 12rem;
+    width: 100%;
+    border: 2px solid #0095ff;
+    border-radius: 20px;
+}
+
+section.products .list ul li p {
+    color: #ff0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+section.products .list ul li span {
+    display: block;
+    color: #0095ff;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+section.products .filter {
+    background-color: #dbdbdb;
+    border: 1px solid #858585;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 10px 20px;
+    position: absolute;
+    top: 50%;
+    left: -170px;
+    z-index: 9999999;
+    transition: left 0.3s ease-in-out;
+}
+
+section.products .filter p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+section.products .filter ul {
+    list-style: none;
+}
+
+section.products .filter ul li {
+    margin: 10px 0;
+}
+
+section.products .filter ul li span {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.hidden {
+    display: none;
+}
+
+@media screen and (max-width: 775px) {
+    /* ESTILO DO CABEÇALHO */
+    header {
+        background-color: #0095ff;
+        padding: 5px 4%;
+    }
+
+    header .info ul li,
+    header .social ul li {
+        display: block;
+    }
+
+    header .info ul li p {
+        font-size: 1rem;
+    }
+
+    header .social ul li a {
+        font-size: 1.3rem;
+    }
+
+    /* ESTILO DA NAVEGAÇÃO */
+    nav {
+        padding: 10px 8% 0;
+    }
+
+    /* ESTILO DE PRODUTOS */
+    section.products {
+        padding: 20px 8%;
+    }
+
+    section.products img.home-logo {
+        width: 90%;
+    }
+
+    @keyframes pulse {
+        0% {
+            scale: .8;
+        }
+        100% {
+            scale: .6;
+        }
+    }
+}
+
+@media screen and (max-width: 612px) {
+    /* ESTILO DE PRODUTOS */
+    section.products .list ul {
+        grid-template-columns: repeat(2, 12rem);
+    }
+
+    section.products .list ul li p {
+        font-size: 1rem;
+    }
+
+    section.products .list ul li span {
+        font-size: 1.2rem;
+    }
+
+    section.products .filter p {
+        font-size: 1.3rem;
+    }
+
+    section.products .filter ul li span {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    /* ESTILO DA NAVEGAÇÃO */
+    nav .menu ul li a button {
+        width: 90px;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    /* ESTILO GERAIS */
+    body {
+        background-image: url(assets/background2.png);
+    }
+
+    /* ESTILO DE PRODUTOS */
+    section.products .list ul {
+        grid-template-columns: repeat(1, 12rem);
+    }
+
+    section.products .list ul li p {
+        font-size: 1rem;
+    }
+
+    section.products .list ul li span {
+        font-size: 1rem;
+    }
+
+    section.products .filter p {
+        font-size: 1.1rem;
+    }
+
+    section.products .filter ul li span {
+        font-size: .8rem;
+    }
+
+    /* ESTILO DA NAVEGAÇÃO */
+    nav .menu ul li a button {
+        margin: 0 5px;
+        font-size: .8rem;
+    }
+
+    section.products .filter {
+        padding: 10px 10px;
+    }
+    
+    section.products .filter p {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+    
+    section.products .filter ul li span {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    /* ESTILO DO CABEÇALHO */
+    header .info ul li p {
+        font-size: .7rem;
+    }
+    
+    header .social ul li a {
+        font-size: .8rem;
+        margin-right: 5px;
+    }
+
+    /* ESTILO DA NAVEGAÇÃO */
+    nav .menu ul li a button {
+        font-size: .6rem;
+        width: 70px;
+    }
+
+    section.products .filter {
+        padding: 10px 5px;
+    }
+    
+    section.products .filter p {
+        font-size: 1.1rem;
+    }
+    
+    section.products .filter ul li span {
+        font-size: .8rem;
+    }
+}
